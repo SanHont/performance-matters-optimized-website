@@ -79,7 +79,7 @@ html {
 body {
   background-color: var(--c-dark-grey-bg);
   color: var(--c-body-text-color);
-  font-family: 'Inter-Light';
+  font-family: 'Inter-Regular';
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 5% 30% 1fr;
@@ -92,11 +92,19 @@ body {
     "sidebar score-history players-team-two";
 }
 
+/*--------------------------------------------------------------
+  # SIDEBAR
+  --------------------------------------------------------------*/
+
 .sidebar {
   grid-area: sidebar;
   border-radius: 0 10px 10px 0;
   background-color: #36383E;
 }
+
+/*--------------------------------------------------------------
+  # LIVE SCORE
+  --------------------------------------------------------------*/
 
 .live-score {
   grid-area: live-score;
@@ -106,6 +114,14 @@ body {
   border-radius: var(--br-areas);
 }
 
+.live-score-titles {
+
+}
+
+/*--------------------------------------------------------------
+  # SCORE HISTORY
+  --------------------------------------------------------------*/
+
 .score-history {
   grid-area: score-history;
   margin-left: 2rem;
@@ -113,6 +129,10 @@ body {
   border-radius: var(--br-areas);
   margin-bottom: 1.5rem;
 }
+
+/*--------------------------------------------------------------
+  # PLAYER AREA
+  --------------------------------------------------------------*/
 
 .players-team-one {
   margin-top: 1.5rem;
