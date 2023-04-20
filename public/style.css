@@ -159,7 +159,16 @@ body {
   text-align: center;
 }
 
-.card-player span {
+#m {
+  position: absolute;
+  align-self: flex-end;
+  background-color: var(--c-male-gender);
+  border-radius: var(--br-areas);
+  width: 90%;
+  height: 5px;
+}
+
+#f {
   position: absolute;
   align-self: flex-end;
   background-color: var(--c-female-gender);
@@ -176,4 +185,5 @@ body {
   border-radius: var(--br-areas);
   grid-area: players-team-two;
   background-color: #36383e;
+  overflow: auto;
 }

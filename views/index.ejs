@@ -11,11 +11,16 @@
 <section class="players-team-one">
   <h2><%= data1.team1Name %></h2>
   <div class="cards">
-    <% data4.players.forEach(players => { %>
+    <% data1.team1Players.forEach(players => { %>
     <div class="card-player">
       <p><%= players.jerseyNumber %></p>
       <h4><%= players.name %></h4>
-      <span></span>
+
+      <% if(players.gender === "M") { %>
+      <span id="m"></span>
+      <% } else { %>
+      <span id="f"></span>
+      <% } %>
     </div>
     <% }) %>
   </div>
@@ -24,11 +29,16 @@
 <section class="players-team-two">
   <h2><%= data1.team2Name %></h2>
   <div class="cards">
-    <% data4.players.forEach(players => { %>
+    <% data1.team2Players.forEach(players => { %>
     <div class="card-player">
       <p><%= players.jerseyNumber %></p>
       <h4><%= players.name %></h4>
-      <span></span>
+
+      <% if(players.gender === "M") { %>
+      <span id="m"></span>
+      <% } else { %>
+      <span id="f"></span>
+      <% } %>
     </div>
     <% }) %>
   </div>
