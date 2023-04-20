@@ -3,28 +3,28 @@
 --------------------------------------------------------------*/
 
 :root {
-  --c-body-text-color: #FFFFFF;
+  --c-body-text-color: #ffffff;
 
   --c-dark-grey-bg: #242529;
-  --c-area-bg: #36383E;
+  --c-area-bg: #36383e;
 
-  --c-player-cards: #6F6F6F;
-  --c-male-gender: #76C6FF;
-  --c-female-gender: #F476FF;
+  --c-player-cards: #6f6f6f;
+  --c-male-gender: #76c6ff;
+  --c-female-gender: #f476ff;
 
-  --c-blocks-input: #FF4B4B;
-  --c-turnovers-input: #ECD45E;
-  --c-goals-input: #4ED19D;
-  --c-assists-input: #9570CF;
+  --c-blocks-input: #ff4b4b;
+  --c-turnovers-input: #ecd45e;
+  --c-goals-input: #4ed19d;
+  --c-assists-input: #9570cf;
 
-  --c-score-green: #37C356;
-  --c-score-light-green: #5DFF81;
-  --c-score-red: #C91E1E;
-  --c-score-light-red: #FF4D4D;
+  --c-score-green: #37c356;
+  --c-score-light-green: #5dff81;
+  --c-score-red: #c91e1e;
+  --c-score-light-red: #ff4d4d;
 
-  --c-button-border: #EFFFAD;
+  --c-button-border: #efffad;
 
-  --c-live-button: #FF1A1A;
+  --c-live-button: #ff1a1a;
 
   --br-areas: 10px;
 }
@@ -34,27 +34,27 @@
   --------------------------------------------------------------*/
 
 @font-face {
-  font-family: 'Montserrat-Bold';
+  font-family: "Montserrat-Bold";
   src: url(../fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
-  font-family: 'Montserrat-Medium';
+  font-family: "Montserrat-Medium";
   src: url(../fonts/Montserrat-Medium.ttf);
 }
 
 @font-face {
-  font-family: 'Montserrat-SemiBold';
+  font-family: "Montserrat-SemiBold";
   src: url(../fonts/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
-  font-family: 'Inter-Regular';
+  font-family: "Inter-Regular";
   src: url(../fonts/Inter-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Inter-SemiBold';
+  font-family: "Inter-SemiBold";
   src: url(../fonts/Inter-SemiBold.ttf);
 }
 
@@ -79,7 +79,7 @@ html {
 body {
   background-color: var(--c-dark-grey-bg);
   color: var(--c-body-text-color);
-  font-family: 'Inter-Light';
+  font-family: "Inter-Light";
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 5% 30% 1fr;
@@ -95,39 +95,84 @@ body {
 .sidebar {
   grid-area: sidebar;
   border-radius: 0 10px 10px 0;
-  background-color: #36383E;
+  background-color: #36383e;
 }
 
 .live-score {
   grid-area: live-score;
   margin-top: 1.5rem;
   margin-left: 2rem;
-  background-color: #36383E;
+  background-color: #36383e;
   border-radius: var(--br-areas);
 }
 
 .score-history {
   grid-area: score-history;
   margin-left: 2rem;
-  background-color: #36383E;
+  background-color: #36383e;
   border-radius: var(--br-areas);
   margin-bottom: 1.5rem;
 }
 
 .players-team-one {
+  font-family: "Montserrat-Medium";
   margin-top: 1.5rem;
   margin-right: 4rem;
   margin-left: 2rem;
   border-radius: var(--br-areas);
   grid-area: players-team-one;
-  background-color: #36383E;
+  background-color: #36383e;
+  overflow: auto;
+}
+
+.players-team-one h2 {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-player {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--c-player-cards);
+  border-radius: var(--br-areas);
+  width: 115px;
+  height: 50px;
+  margin: 0.5rem;
+}
+
+.card-player p {
+  overflow-wrap: break-word;
+  width: 25%;
+  text-align: center;
+}
+
+.card-player h4 {
+  width: 75%;
+  text-align: center;
+}
+
+.card-player span {
+  position: absolute;
+  align-self: flex-end;
+  background-color: var(--c-female-gender);
+  border-radius: var(--br-areas);
+  width: 90%;
+  height: 5px;
 }
 
 .players-team-two {
+  font-family: "Montserrat-Medium";
   margin-bottom: 1.5rem;
   margin-left: 2rem;
   margin-right: 4rem;
   border-radius: var(--br-areas);
   grid-area: players-team-two;
-  background-color: #36383E;
+  background-color: #36383e;
 }

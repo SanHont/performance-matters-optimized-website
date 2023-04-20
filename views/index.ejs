@@ -1,25 +1,27 @@
 <%- include('./partials/head.ejs') %>
 
-    <aside class="sidebar">
+<aside class="sidebar"></aside>
 
-    </aside>
+<section class="live-score">
+  <img src="assets/ultitv-team1-logo.svg" />
+  <img src="assets/ultitv-team2-logo.svg" />
+</section>
 
-    <section class="live-score">
-        <img src="assets/ultitv-team1-logo.svg">
-        <img src="assets/ultitv-team2-logo.svg">
+<section class="score-history"></section>
 
-    </section>
+<section class="players-team-one">
+  <h2>..teamname</h2>
+  <div class="cards">
+    <% data4.players.forEach(players => { %>
+    <div class="card-player">
+      <p><%= players.jerseyNumber %></p>
+      <h4><%= players.name %></h4>
+      <span></span>
+    </div>
+    <% }) %>
+  </div>
+</section>
 
-    <section class="score-history">
+<section class="players-team-two"></section>
 
-    </section>
-
-    <section class="players-team-one">
-
-    </section>
-
-    <section class="players-team-two">
-
-    </section>
-
-    <%- include('./partials/foot.ejs') %>
+<%- include('./partials/foot.ejs') %>
