@@ -125,7 +125,8 @@ body {
   overflow: auto;
 }
 
-.players-team-one h2 {
+.players-team-one h2,
+.players-team-two h2 {
   margin-top: 0.5rem;
   margin-left: 1rem;
 }

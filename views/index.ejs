@@ -6,11 +6,10 @@
   <img src="assets/ultitv-team1-logo.svg" />
   <img src="assets/ultitv-team2-logo.svg" />
 </section>
-
 <section class="score-history"></section>
 
 <section class="players-team-one">
-  <h2>..teamname</h2>
+  <h2><%= data1.team1Name %></h2>
   <div class="cards">
     <% data4.players.forEach(players => { %>
     <div class="card-player">
@@ -22,6 +21,17 @@
   </div>
 </section>
 
-<section class="players-team-two"></section>
+<section class="players-team-two">
+  <h2><%= data1.team2Name %></h2>
+  <div class="cards">
+    <% data4.players.forEach(players => { %>
+    <div class="card-player">
+      <p><%= players.jerseyNumber %></p>
+      <h4><%= players.name %></h4>
+      <span></span>
+    </div>
+    <% }) %>
+  </div>
+</section>
 
 <%- include('./partials/foot.ejs') %>
