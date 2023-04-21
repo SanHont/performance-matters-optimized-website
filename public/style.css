@@ -134,6 +134,27 @@ body {
 .cards {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.score-bullet {
+  position: absolute;
+  background-color: var(--c-goals-input);
+  border-radius: 50%;
+  margin-left: 3rem;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+}
+
+.assist-bullet {
+  position: absolute;
+  background-color: var(--c-assists-input);
+  border-radius: 50%;
+  margin-left: 1.1rem;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
 }
 
 .card-player {
@@ -164,7 +185,7 @@ body {
   align-self: flex-end;
   background-color: var(--c-male-gender);
   border-radius: var(--br-areas);
-  width: 90%;
+  width: 80%;
   height: 5px;
 }
 
@@ -173,7 +194,7 @@ body {
   align-self: flex-end;
   background-color: var(--c-female-gender);
   border-radius: var(--br-areas);
-  width: 90%;
+  width: 80%;
   height: 5px;
 }
 
