@@ -106,7 +106,7 @@ body {
   # LIVE SCORE
   --------------------------------------------------------------*/
 
-.live-score-area {
+.live-score-area { 
   grid-area: live-score;
   margin-top: 1.5rem;
   margin-left: 2rem;
