@@ -92,13 +92,21 @@ body {
     "sidebar score-history players-team-two";
 }
 
+/*--------------------------------------------------------------
+  # SIDEBAR
+  --------------------------------------------------------------*/
+
 .sidebar {
   grid-area: sidebar;
   border-radius: 0 10px 10px 0;
   background-color: #36383E;
 }
 
-.live-score {
+/*--------------------------------------------------------------
+  # LIVE SCORE
+  --------------------------------------------------------------*/
+
+.live-score-area { 
   grid-area: live-score;
   margin-top: 1.5rem;
   margin-left: 2rem;
@@ -106,6 +114,64 @@ body {
   position: relative;
   border-radius: var(--br-areas);
 }
+
+.live-score-titles h2{
+  font-family: 'Montserrat-Medium';
+  font-size: 1.4rem;
+  padding-left: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.live-score-titles h3{
+  font-size: 1.2rem;
+  font-family: 'Inter-Regular';
+  font-weight: 300;
+  padding-left: 0.8rem;
+}
+
+.live-button {
+  background-color: var(--c-live-button);
+  width: fit-content;
+  font-family: 'Inter-SemiBold';
+  border-radius: var(--br-areas);
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  font-size: 0.8rem;
+  top: 0.5rem;
+  right: 0.8rem;
+  box-shadow: 3px 3px 3px var(--c-dark-grey-bg);
+}
+
+.live-score {
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.live-score img {
+  width: 6.25rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.live-score-team-names {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.live-score-team-names h4{
+  font-family: 'Inter-Regular';
+  font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+  # SCORE HISTORY
+  --------------------------------------------------------------*/
 
 .score-history {
   grid-area: score-history;
