@@ -3,28 +3,28 @@
 --------------------------------------------------------------*/
 
 :root {
-  --c-body-text-color: #FFFFFF;
+  --c-body-text-color: #ffffff;
 
   --c-dark-grey-bg: #242529;
-  --c-area-bg: #36383E;
+  --c-area-bg: #36383e;
 
-  --c-player-cards: #6F6F6F;
-  --c-male-gender: #76C6FF;
-  --c-female-gender: #F476FF;
+  --c-player-cards: #6f6f6f;
+  --c-male-gender: #76c6ff;
+  --c-female-gender: #f476ff;
 
-  --c-blocks-input: #FF4B4B;
-  --c-turnovers-input: #ECD45E;
-  --c-goals-input: #4ED19D;
-  --c-assists-input: #9570CF;
+  --c-blocks-input: #ff4b4b;
+  --c-turnovers-input: #ecd45e;
+  --c-goals-input: #4ed19d;
+  --c-assists-input: #9570cf;
 
-  --c-score-green: #37C356;
-  --c-score-light-green: #5DFF81;
-  --c-score-red: #C91E1E;
-  --c-score-light-red: #FF4D4D;
+  --c-score-green: #37c356;
+  --c-score-light-green: #5dff81;
+  --c-score-red: #c91e1e;
+  --c-score-light-red: #ff4d4d;
 
-  --c-button-border: #EFFFAD;
+  --c-button-border: #efffad;
 
-  --c-live-button: #FF1A1A;
+  --c-live-button: #ff1a1a;
 
   --br-areas: 10px;
 }
@@ -34,27 +34,27 @@
   --------------------------------------------------------------*/
 
 @font-face {
-  font-family: 'Montserrat-Bold';
+  font-family: "Montserrat-Bold";
   src: url(../fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
-  font-family: 'Montserrat-Medium';
+  font-family: "Montserrat-Medium";
   src: url(../fonts/Montserrat-Medium.ttf);
 }
 
 @font-face {
-  font-family: 'Montserrat-SemiBold';
+  font-family: "Montserrat-SemiBold";
   src: url(../fonts/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
-  font-family: 'Inter-Regular';
+  font-family: "Inter-Regular";
   src: url(../fonts/Inter-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Inter-SemiBold';
+  font-family: "Inter-SemiBold";
   src: url(../fonts/Inter-SemiBold.ttf);
 }
 
@@ -79,7 +79,7 @@ html {
 body {
   background-color: var(--c-dark-grey-bg);
   color: var(--c-body-text-color);
-  font-family: 'Inter-Regular';
+  font-family: "Inter-Light";
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 5% 30% 1fr;
@@ -92,113 +92,167 @@ body {
     "sidebar score-history players-team-two";
 }
 
-/*--------------------------------------------------------------
-  # SIDEBAR
-  --------------------------------------------------------------*/
-
 .sidebar {
   grid-area: sidebar;
   border-radius: 0 10px 10px 0;
-  background-color: #36383E;
-}
-
-/*--------------------------------------------------------------
-  # LIVE SCORE
-  --------------------------------------------------------------*/
-
-.live-score-area { 
-  grid-area: live-score;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-  background-color: #36383E;
-  position: relative;
-  border-radius: var(--br-areas);
-}
-
-.live-score-titles h2{
-  font-family: 'Montserrat-Medium';
-  font-size: 1.4rem;
-  padding-left: 0.8rem;
-  padding-top: 0.5rem;
-}
-
-.live-score-titles h3{
-  font-size: 1.2rem;
-  font-family: 'Inter-Regular';
-  font-weight: 300;
-  padding-left: 0.8rem;
-}
-
-.live-button {
-  background-color: var(--c-live-button);
-  width: fit-content;
-  font-family: 'Inter-SemiBold';
-  border-radius: var(--br-areas);
-  padding: 0.2rem 0.5rem;
-  position: absolute;
-  font-size: 0.8rem;
-  top: 0.5rem;
-  right: 0.8rem;
-  box-shadow: 3px 3px 3px var(--c-dark-grey-bg);
+  background-color: #36383e;
 }
 
 .live-score {
-  padding: 0.3rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 2rem;
+  grid-area: live-score;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  background-color: #36383e;
+  border-radius: var(--br-areas);
 }
-
-.live-score img {
-  width: 6.25rem;
-  height: auto;
-  object-fit: cover;
-}
-
-.live-score-team-names {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1.8rem;
-  padding-right: 1.8rem;
-  padding-bottom: 1rem;
-}
-
-.live-score-team-names h4{
-  font-family: 'Inter-Regular';
-  font-weight: 500;
-}
-
-/*--------------------------------------------------------------
-  # SCORE HISTORY
-  --------------------------------------------------------------*/
 
 .score-history {
   grid-area: score-history;
   margin-left: 2rem;
-  background-color: #36383E;
+  background-color: #36383e;
   border-radius: var(--br-areas);
   margin-bottom: 1.5rem;
 }
 
-/*--------------------------------------------------------------
-  # PLAYER AREA
-  --------------------------------------------------------------*/
+.team-scored-total {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.team-scored-left {
+  margin: 0 auto;
+}
+
+.team-scored-right {
+  margin: 0 auto;
+}
+
+table {
+  font-family: "Montserrat-Medium";
+}
+
+th {
+  width: 2.8rem;
+}
+
+/* team-players */
 
 .players-team-one {
+  font-family: "Montserrat-Medium";
   margin-top: 1.5rem;
   margin-right: 4rem;
   margin-left: 2rem;
   border-radius: var(--br-areas);
   grid-area: players-team-one;
-  background-color: #36383E;
+  background-color: #36383e;
+  overflow: auto;
+}
+
+.players-team-one h2,
+.players-team-two h2 {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bullet {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  margin-left: 2rem;
+  gap: 0.2rem;
+  height: 100%;
+  margin-top: -1.2rem;
+}
+
+.score-bullet {
+  background-color: var(--c-goals-input);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+}
+
+.assist-bullet {
+  background-color: var(--c-assists-input);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+}
+
+.block-bullet {
+  background-color: var(--c-blocks-input);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+}
+
+.turnover-bullet {
+  background-color: var(--c-turnovers-input);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+}
+
+.card-player {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--c-player-cards);
+  border-radius: var(--br-areas);
+  width: 115px;
+  height: 50px;
+  margin: 0.5rem;
+}
+
+.card-player p {
+  overflow-wrap: break-word;
+  width: 25%;
+  text-align: center;
+}
+
+.card-player h4 {
+  width: 75%;
+  text-align: center;
+}
+
+#m {
+  position: absolute;
+  align-self: flex-end;
+  background-color: var(--c-male-gender);
+  border-radius: var(--br-areas);
+  width: 80%;
+  height: 4px;
+}
+
+#f {
+  position: absolute;
+  align-self: flex-end;
+  background-color: var(--c-female-gender);
+  border-radius: var(--br-areas);
+  width: 80%;
+  height: 4px;
 }
 
 .players-team-two {
+  font-family: "Montserrat-Medium";
   margin-bottom: 1.5rem;
   margin-left: 2rem;
   margin-right: 4rem;
   border-radius: var(--br-areas);
   grid-area: players-team-two;
-  background-color: #36383E;
+  background-color: #36383e;
+  overflow: auto;
 }
