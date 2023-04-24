@@ -11,14 +11,14 @@
 <section class="players-team-one">
   <h2><%= data1.team1Name %></h2>
   <div class="cards">
-      <div class="score-bullet">
-      <div class="assist-bullet"></div>
-      <div class="block-bullet"></div>
-      <div class="turnover-bullet"></div>
-    </div>
     <% data1.team1Players.forEach(players => { %>
     <div class="card-player">
-
+      <div class="bullet">
+        <div class="score-bullet"></div>
+        <div class="assist-bullet"></div>
+        <div class="block-bullet"></div>
+        <div class="turnover-bullet"></div>
+      </div>
       <p><%= players.jerseyNumber %></p>
       <h4><%= players.name %></h4>
 
