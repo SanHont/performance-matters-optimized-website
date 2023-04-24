@@ -114,6 +114,32 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.team-scored-total {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.team-scored-left {
+  margin: 0 auto;
+}
+
+.team-scored-right {
+  margin: 0 auto;
+}
+
+table {
+  font-family: "Montserrat-Medium";
+}
+
+th {
+  width: 2.8rem;
+}
+
+/* team-players */
+
 .players-team-one {
   font-family: "Montserrat-Medium";
   margin-top: 1.5rem;
@@ -208,7 +234,7 @@ body {
   background-color: var(--c-male-gender);
   border-radius: var(--br-areas);
   width: 80%;
-  height: 5px;
+  height: 4px;
 }
 
 #f {
@@ -217,7 +243,7 @@ body {
   background-color: var(--c-female-gender);
   border-radius: var(--br-areas);
   width: 80%;
-  height: 5px;
+  height: 4px;
 }
 
 .players-team-two {
