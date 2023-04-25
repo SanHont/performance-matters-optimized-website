@@ -21,7 +21,60 @@
   </div>
 </section>
 
-<section class="score-history"></section>
+<section class="score-history">
+  <section class="score-history">
+    <div class="team-scored-total">
+      <div class="team-scored-left">
+        <table cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th>Pass</th>
+              <th>Turn</th>
+              <th>O/D</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="score-info-team-1">
+              <% data2.scoredPoints.forEach(point => { %>
+            </tr>
+            <tr
+              class="score-info-team-1 <%= (point.scored===point.team1Name) ? 'green' : 'red' %>"
+            >
+              <td><%= point.team1Passes %></td>
+              <td><%= point.team1Turnovers %></td>
+              <td><%= point.team1OorD %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <div class="team-scored-right">
+        <table cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th>Pass</th>
+              <th>Turn</th>
+              <th>O/D</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="score-info-team-2">
+              <% data2.scoredPoints.forEach(point => { %>
+            </tr>
+            <tr
+              class="score-info-team-2 <%= (point.scored===point.team2Name) ? 'green' : 'red' %>"
+            >
+              <td><%= point.team2Passes %></td>
+              <td><%= point.team2Turnovers %></td>
+              <td><%= point.team2OorD %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</section>
 
 <section class="players-team-one">
   <h2><%= data1.team1Name %></h2>
