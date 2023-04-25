@@ -181,6 +181,30 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.team-scored-total {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.team-scored-left {
+  margin: 0 auto;
+}
+
+.team-scored-right {
+  margin: 0 auto;
+}
+
+table {
+  font-family: "Montserrat-Medium";
+}
+
+th {
+  width: 2.8rem;
+}
+
 /*--------------------------------------------------------------
   # PLAYER AREA
   --------------------------------------------------------------*/
