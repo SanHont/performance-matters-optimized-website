@@ -82,14 +82,14 @@ body {
   font-family: "Inter-Regular";
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 5% 30% 1fr;
+  grid-template-columns: 5% 30% 1fr 1fr;
   grid-template-rows: 1.2fr 0.8fr 1fr 1fr;
   gap: 1.5rem;
   grid-template-areas:
-    "sidebar live-score players-team-one"
-    "sidebar score-history players-team-one"
-    "sidebar score-history players-team-two"
-    "sidebar score-history players-team-two";
+    "sidebar players-team-one live-score players-team-two"
+    "sidebar players-team-one score-history players-team-two"
+    "sidebar players-team-one score-history players-team-two"
+    "sidebar players-team-one score-history players-team-two";
 }
 
 /*--------------------------------------------------------------
@@ -109,7 +109,6 @@ body {
 .live-score-area {
   grid-area: live-score;
   margin-top: 1.5rem;
-  margin-left: 2rem;
   background-color: #36383e;
   position: relative;
   border-radius: var(--br-areas);
@@ -161,7 +160,6 @@ body {
   justify-content: space-between;
   padding-left: 1.8rem;
   padding-right: 1.8rem;
-  padding-bottom: 1rem;
 }
 
 .live-score-team-names h4 {
@@ -175,7 +173,6 @@ body {
 
 .score-history {
   grid-area: score-history;
-  margin-left: 2rem;
   background-color: #36383e;
   border-radius: var(--br-areas);
   margin-bottom: 1.5rem;
@@ -227,8 +224,8 @@ th {
 .players-team-one {
   font-family: "Montserrat-Medium";
   margin-top: 1.5rem;
-  margin-right: 4rem;
-  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
   border-radius: var(--br-areas);
   grid-area: players-team-one;
   background-color: #36383e;
@@ -333,8 +330,8 @@ th {
 .players-team-two {
   font-family: "Montserrat-Medium";
   margin-bottom: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 4rem;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
   border-radius: var(--br-areas);
   grid-area: players-team-two;
   background-color: #36383e;
