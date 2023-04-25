@@ -1,39 +1,81 @@
 <%- include('./partials/head.ejs') %>
 
-    <aside class="sidebar">
+<aside class="sidebar"></aside>
 
-    </aside>
+<section class="live-score-area">
+  <div class="live-score-titles">
+    <h2>New Street Mega Bowl</h2>
+    <h3>Grand Final - Division: Mixed</h3>
+  </div>
+  <div class="live-button">
+    <h2>Live</h2>
+  </div>
+  <div class="live-score">
+    <img src="assets/ultitvlogohome.svg" />
+    <h3>3 - 4</h3>
+    <img src="assets/ultitvlogoaway.svg" />
+  </div>
+  <div class="live-score-team-names">
+    <h4>Mammoths</h4>
+    <h4>Team Empire</h4>
+  </div>
+</section>
 
-    <section class="live-score-area">
-        <div class="live-score-titles">
-            <h2>New Street Mega Bowl</h2>
-            <h3>Grand Final - Division: Mixed</h3>
-        </div>
-        <div class="live-button">
-            <h2>Live</h2>
-        </div>
-        <div class="live-score">
-            <img src="assets/ultitvlogohome.svg">
-            <h3>3 - 4</h3>
-            <img src="assets/ultitvlogoaway.svg">
-        </div>
-        <div class="live-score-team-names">
-            <h4>Mammoths</h4>
-            <h4>Team Empire</h4>
-        </div>
+<section class="score-history">
+  <div class="team-scored-total">
+    <div class="team-scored-left">
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>Pass</th>
+            <th>Turn</th>
+            <th>O/D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="score-info-team-1">
+            <% data2.scoredPoints.forEach(point => { %>
+          </tr>
+          <tr
+            class="score-info-team-1 <%= (point.scored===point.team1Name) ? 'green' : 'red' %>"
+          >
+            <td><%= point.team1Passes %></td>
+            <td><%= point.team1Turnovers %></td>
+            <td><%= point.team1OorD %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <div class="team-scored-right">
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>Pass</th>
+            <th>Turn</th>
+            <th>O/D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="score-info-team-2">
+            <% data2.scoredPoints.forEach(point => { %>
+          </tr>
+          <tr
+            class="score-info-team-2 <%= (point.scored===point.team2Name) ? 'green' : 'red' %>"
+          >
+            <td><%= point.team2Passes %></td>
+            <td><%= point.team2Turnovers %></td>
+            <td><%= point.team2OorD %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-    </section>
+<section class="players-team-one"></section>
 
-    <section class="score-history">
+<section class="players-team-two"></section>
 
-    </section>
-
-    <section class="players-team-one">
-
-    </section>
-
-    <section class="players-team-two">
-
-    </section>
-
-    <%- include('./partials/foot.ejs') %>
+<%- include('./partials/foot.ejs') %>
