@@ -205,6 +205,21 @@ th {
   width: 2.8rem;
 }
 
+.red {
+  background-color: var(--c-score-light-red);
+}
+
+.green {
+  background-color: var(--c-score-light-green);
+}
+
+.dark-red {
+  background-color: var(--c-score-red);
+}
+
+.dark-green {
+  background-color: var(--c-score-green);
+}
 /*--------------------------------------------------------------
   # PLAYER AREA
   --------------------------------------------------------------*/
