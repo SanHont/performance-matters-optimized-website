@@ -130,10 +130,40 @@
     <% data1.team1Players.forEach(players => { %>
     <div class="card-player">
       <div class="bullet">
-        <div class="score-bullet"></div>
-        <div class="assist-bullet"></div>
-        <div class="block-bullet"></div>
-        <div class="turnover-bullet"></div>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.scoredBy) { %>
+            <div class="score-bullet"></div>
+          <% } else { %>
+            <div class="score-bullet-no"></div>
+          <% } %>
+        <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.assistBy) { %>
+            <div class="assist-bullet"></div>
+          <% } else { %>
+            <div class="assist-bullet-no"></div>
+            <% } %>
+          <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.blockPlayers) { %>
+            <div class="block-bullet"></div>
+          <% } else { %>
+            <div class="block-bullet-no"></div>
+            <% } %>
+          <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.turnoverPlayers) { %>
+            <div class="turnover-bullet"></div>
+          <% } else { %>
+            <div class="turnover-bullet-no"></div>
+             <% } %>
+          <% }) %>
+
+        
       </div>
       <p><%= players.jerseyNumber %></p>
       <h4><%= players.name %></h4>
