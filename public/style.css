@@ -293,7 +293,7 @@ th {
   justify-content: flex-end;
   position: absolute;
   z-index: 1;
-  margin-left: 4rem;
+  margin-left: 3rem;
   height: 100%;
   margin-top: -1.2rem;
   text-align: center;
@@ -306,20 +306,6 @@ th {
   height: 15px;
   width: 15px;
   z-index: 1;
-}
-
-.score-bullet,
-.assist-bullet,
-.block-bullet,
-.turnover-bullet {
-  display: block;
-}
-
-.score-bullet-no,
-.assist-bullet-no,
-.block-bullet-no,
-.turnover-bullet-no {
-  display: block;
 }
 
 .assist-bullet {
@@ -345,6 +331,13 @@ th {
   width: 15px;
   z-index: 1;
 }
+
+/* .score-bullet-no,
+.assist-bullet-no,
+.block-bullet-no,
+.turnover-bullet-no {
+  display: none;
+} */
 
 .card-player {
   position: relative;
