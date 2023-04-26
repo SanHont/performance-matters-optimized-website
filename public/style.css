@@ -139,6 +139,7 @@ body {
   top: 0.5rem;
   right: 0.8rem;
   box-shadow: 3px 3px 3px var(--c-dark-grey-bg);
+  animation: breath 2s infinite;
 }
 
 .live-score {
@@ -217,6 +218,7 @@ th {
 .dark-green {
   background-color: var(--c-score-green);
 }
+
 /*--------------------------------------------------------------
   # PLAYER AREA
   --------------------------------------------------------------*/
@@ -336,4 +338,14 @@ th {
   grid-area: players-team-two;
   background-color: #36383e;
   overflow: auto;
+}
+
+/*--------------------------------------------------------------
+  # ANIMATIONS
+  --------------------------------------------------------------*/
+
+@keyframes breath {
+  50% {
+    scale: 1.1;
+  }
 }
