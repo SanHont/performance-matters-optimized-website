@@ -27,7 +27,8 @@
   --c-live-button: #ff1a1a;
 
   --br-areas: 10px;
-  --br-card: 10px 10px 0 0;
+  --br-card: 10px 10px 2px 2px;
+  --br-gender: 0px 0px 2px 2px
 }
 
 /*--------------------------------------------------------------
@@ -83,7 +84,7 @@ body {
   font-family: "Inter-Regular";
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 5% 30% 1fr 1fr;
+  grid-template-columns: 5% 32% 25% 32%;
   grid-template-rows: 1.2fr 0.8fr 1fr 1fr;
   gap: 1.5rem;
   grid-template-areas:
@@ -180,20 +181,59 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.input-buttons {
+  margin: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-buttons button{
+  font-family: 'Montserrat-SemiBold';
+  border-radius: var(--br-areas);
+  padding: 0.2rem 0.4rem;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-buttons button:hover{
+  scale: 1.05;
+}
+
+.input-goals-button{
+  background-color: var(--c-goals-input);
+  color: var(--c-body-text-color);
+}
+
+.input-assists-button{
+  background-color: var(--c-assists-input);
+  color: var(--c-body-text-color);
+}
+
+.input-blocks-button{
+  background-color: var(--c-blocks-input);
+  color: var(--c-body-text-color);
+}
+
+.input-turnovers-button{
+  background-color: var(--c-turnovers-input);
+  color: var(--c-dark-grey-bg);
+}
+
 .team-scored-total {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-top: 2.5rem;
   width: 100%;
 }
 
 .team-scored-left {
-  margin: 0 auto;
+  margin: 0 0 0 0.8rem;
 }
 
 .team-scored-right {
-  margin: 0 auto;
+  margin: 0 0.8rem 0 0;
 }
 
 table {
@@ -237,13 +277,14 @@ th {
 
 .players-team-one h2,
 .players-team-two h2 {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
+  margin-top: 0.8rem;
+  margin-left: 1.25rem;
 }
 
 .cards {
   position: relative;
   display: flex;
+  margin: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -332,7 +373,7 @@ th {
   position: absolute;
   align-self: flex-end;
   background-color: var(--c-male-gender);
-  border-radius: var(--br-areas);
+  border-radius: var(--br-gender);
   width: 100%;
   height: 4px;
 }
@@ -341,7 +382,7 @@ th {
   position: absolute;
   align-self: flex-end;
   background-color: var(--c-female-gender);
-  border-radius: var(--br-areas);
+  border-radius: var(--br-gender);
   width: 100%;
   height: 4px;
 }
