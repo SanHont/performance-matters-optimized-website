@@ -27,6 +27,7 @@
   --c-live-button: #ff1a1a;
 
   --br-areas: 10px;
+  --br-card: 10px 10px 0 0;
 }
 
 /*--------------------------------------------------------------
@@ -248,12 +249,14 @@ th {
 
 .bullet {
   display: flex;
+  justify-content: flex-end;
   position: absolute;
   z-index: 1;
-  margin-left: 2rem;
-  gap: 0.2rem;
+  margin-left: 4rem;
   height: 100%;
   margin-top: -1.2rem;
+  text-align: center;
+  font-size: smaller;
 }
 
 .score-bullet {
@@ -262,6 +265,20 @@ th {
   height: 15px;
   width: 15px;
   z-index: 1;
+}
+
+.score-bullet,
+.assist-bullet,
+.block-bullet,
+.turnover-bullet {
+  display: block;
+}
+
+.score-bullet-no,
+.assist-bullet-no,
+.block-bullet-no,
+.turnover-bullet-no {
+  display: block;
 }
 
 .assist-bullet {
@@ -294,7 +311,7 @@ th {
   justify-content: space-around;
   align-items: center;
   background-color: var(--c-player-cards);
-  border-radius: var(--br-areas);
+  border-radius: var(--br-card);
   width: 115px;
   height: 50px;
   margin: 0.5rem;
@@ -316,7 +333,7 @@ th {
   align-self: flex-end;
   background-color: var(--c-male-gender);
   border-radius: var(--br-areas);
-  width: 80%;
+  width: 100%;
   height: 4px;
 }
 
@@ -325,7 +342,7 @@ th {
   align-self: flex-end;
   background-color: var(--c-female-gender);
   border-radius: var(--br-areas);
-  width: 80%;
+  width: 100%;
   height: 4px;
 }
 

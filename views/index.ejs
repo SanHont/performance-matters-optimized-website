@@ -4,20 +4,20 @@
 
 <section class="live-score-area">
   <div class="live-score-titles">
-    <h2>New Street Mega Bowl</h2>
-    <h3>Grand Final - Division: Mixed</h3>
+    <h2><%= data1.field %></h2>
+    <h3> <%= data1.gameStatus %> - <%= data1.division %></h3>
   </div>
   <div class="live-button">
     <h2>Live<span class="live-icon"></span></h2>
   </div>
   <div class="live-score">
     <img src="assets/ultitvlogohome.svg" />
-    <h3>3 - 4</h3>
+    <h3><%= data2.team1Score %> - <%= data2.team2Score %></h3>
     <img src="assets/ultitvlogoaway.svg" />
   </div>
   <div class="live-score-team-names">
-    <h4>Mammoths</h4>
-    <h4>Team Empire</h4>
+    <h4><%= data2.team1Name %></h4>
+    <h4><%= data2.team2Name %></h4>
   </div>
 </section>
 
@@ -130,10 +130,40 @@
     <% data1.team1Players.forEach(players => { %>
     <div class="card-player">
       <div class="bullet">
-        <div class="score-bullet"></div>
-        <div class="assist-bullet"></div>
-        <div class="block-bullet"></div>
-        <div class="turnover-bullet"></div>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.scoredBy) { %>
+            <div class="score-bullet">1</div>
+          <% } else { %>
+            <div class="score-bullet-no"></div>
+          <% } %>
+        <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.assistBy) { %>
+            <div class="assist-bullet">1</div>
+          <% } else { %>
+            <div class="assist-bullet-no"></div>
+            <% } %>
+          <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.blockPlayers) { %>
+            <div class="block-bullet">1</div>
+          <% } else { %>
+            <div class="block-bullet-no"></div>
+            <% } %>
+          <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.turnoverPlayers) { %>
+            <div class="turnover-bullet">1</div>
+          <% } else { %>
+            <div class="turnover-bullet-no"></div>
+             <% } %>
+          <% }) %>
+
+        
       </div>
       <p><%= players.jerseyNumber %></p>
       <h4><%= players.name %></h4>
