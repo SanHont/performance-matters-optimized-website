@@ -9,9 +9,9 @@
   --c-area-bg: #36383e;
 
   /* #LIGHT MODE COLORS */
-  --c-light-bg: #C7C7C7;
-  --c-light-area-bg: #EAEAEA;
-  --c-light-body-text-color:#6F6F6F;
+  --c-light-bg: #c7c7c7;
+  --c-light-area-bg: #eaeaea;
+  --c-light-body-text-color: #6f6f6f;
   --c-light-player-cards: #6f6f6f;
 
   --c-player-cards: #6f6f6f;
@@ -116,10 +116,6 @@ body {
 .sidebar img {
   margin-bottom: 2rem;
 }
-
-
-
-
 
 /*--------------------------------------------------------------
   # LIVE SCORE
@@ -416,5 +412,18 @@ th {
 @keyframes breath {
   50% {
     scale: 1.1;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Ligth-mode
+  --------------------------------------------------------------*/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --c-dark-grey-bg: #c7c7c7;
+    --c-area-bg: #eaeaea;
+    /* --c-body-text-color: #6f6f6f; */
+    --c-player-cards: #6f6f6f;
   }
 }
