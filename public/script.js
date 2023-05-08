@@ -1,5 +1,5 @@
-let sidebar = document.querySelector(".sidebar")
+let darkToggle = document.getElementById("toggle");
 
-sidebar.addEventListener("click", () => {
-  sidebar.classList.toggle(".sidebar-toggle")
-})
+darkToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+});

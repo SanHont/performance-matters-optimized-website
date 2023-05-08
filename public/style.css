@@ -8,13 +8,8 @@
   --c-dark-grey-bg: #242529;
   --c-area-bg: #36383e;
 
-  /* #LIGHT MODE COLORS */
-  --c-light-bg: #c7c7c7;
-  --c-light-area-bg: #eaeaea;
-  --c-light-body-text-color: #6f6f6f;
-  --c-light-player-cards: #6f6f6f;
-
   --c-player-cards: #6f6f6f;
+  --c-player-cards-text: #fff:
   --c-male-gender: #76c6ff;
   --c-female-gender: #f476ff;
 
@@ -110,11 +105,17 @@ body {
   justify-content: end;
   grid-area: sidebar;
   border-radius: 0 10px 10px 0;
-  background-color: #36383e;
+  background-color: var(--c-area-bg);
 }
 
 .sidebar img {
   margin-bottom: 2rem;
+}
+
+#toggle {
+  background-color: var(--br-card);
+  border: none;
+  cursor: pointer;
 }
 
 /*--------------------------------------------------------------
@@ -125,6 +126,7 @@ body {
   grid-area: live-score;
   margin-top: 1.5rem;
   background-color: var(--c-area-bg);
+  color: var(--c-player-cards-text);
   position: relative;
   border-radius: var(--br-areas);
 }
@@ -231,7 +233,7 @@ body {
 
 .input-turnovers-button {
   background-color: var(--c-turnovers-input);
-  color: var(--c-dark-grey-bg);
+  color: var(--c-body-text-color);
 }
 
 .team-scored-total {
@@ -426,4 +428,24 @@ th {
     /* --c-body-text-color: #6f6f6f; */
     --c-player-cards: #6f6f6f;
   }
+  .live-score-titles,
+  .live-score,
+  .live-score-team-names,
+  .input-turnovers-button,
+  .players-team-one h2,
+  .players-team-two h2 {
+    color: black;
+  }
+
+  thead {
+    color: black;
+  }
+}
+
+.light {
+  --c-dark-grey-bg: #c7c7c7;
+  --c-area-bg: #eaeaea;
+  /* --c-body-text-color: #6f6f6f; */
+  --c-player-cards: #6f6f6f;
+  --c-player-cards-text: #000000;
 }
