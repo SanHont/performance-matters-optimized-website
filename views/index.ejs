@@ -1,6 +1,7 @@
 <%- include('./partials/head.ejs') %>
 
-  <aside class="sidebar"></aside>
+  <aside class="sidebar">
+  </aside>
 
   <section class="live-score-area">
     <div class="live-score-titles">
@@ -188,86 +189,104 @@
     </section>
   </section>
 
-  <section class="players-team-one">
-    <h2>
-      <%= data1.team1Name %>
-    </h2>
-    <div class="cards">
-      <% data1.team1Players.forEach(players=> { %>
-        <div class="card-player">
-          <div class="bullet">
-
-            <% data2.scoredPoints.forEach(score=> { %>
-              <% if (players.playerId===score.scoredBy) { %>
-                <div class="score-bullet">1</div>
-                <% } else { %>
-                  <div class="score-bullet-no"></div>
-                  <% } %>
-                    <% }) %>
-
-                      <% data2.scoredPoints.forEach(score=> { %>
-                        <% if (players.playerId===score.assistBy) { %>
-                          <div class="assist-bullet">1</div>
-                          <% } else { %>
-                            <div class="assist-bullet-no"></div>
-                            <% } %>
-                              <% }) %>
-
-                                <% data2.scoredPoints.forEach(score=> { %>
-                                  <% if (players.playerId===score.blockPlayers) { %>
-                                    <div class="block-bullet">1</div>
-                                    <% } else { %>
-                                      <div class="block-bullet-no"></div>
-                                      <% } %>
-                                        <% }) %>
-
-                                          <% data2.scoredPoints.forEach(score=> { %>
-                                            <% if (players.playerId===score.turnoverPlayers) { %>
-                                              <div class="turnover-bullet">1</div>
-                                              <% } else { %>
-                                                <div class="turnover-bullet-no"></div>
-                                                <% } %>
-                                                  <% }) %>
-
-
-          </div>
-          <p>
-            <%= players.jerseyNumber %>
-          </p>
-          <h4>
-            <%= players.name %>
-          </h4>
-          <% if(players.gender==="M" ) { %>
-            <span id="m"></span>
-            <% } else { %>
-              <span id="f"></span>
-              <% } %>
-        </div>
+<section class="players-team-one">
+  <h2><%= data1.team1Name %></h2>
+  <div class="cards">
+    <% data1.team1Players.forEach(players => { %>
+    <div class="card-player">
+      <div class="bullet">
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.scoredBy) { %>
+            <div class="score-bullet">1</div>
+          <% } else { %>
+            <div class="score-bullet-no"></div>
+          <% } %>
         <% }) %>
-    </div>
-  </section>
 
-  <section class="players-team-two">
-    <h2>
-      <%= data1.team2Name %>
-    </h2>
-    <div class="cards">
-      <% data1.team2Players.forEach(players=> { %>
-        <div class="card-player">
-          <p>
-            <%= players.jerseyNumber %>
-          </p>
-          <h4>
-            <%= players.name %>
-          </h4>
-          <% if(players.gender==="M" ) { %>
-            <span id="m"></span>
+        <% data2.scoredPoints.forEach(score=> { %>
+           <% if (players.playerId===score.assistBy) { %>
+              <div class="assist-bullet">1</div>
             <% } else { %>
-              <span id="f"></span>
-              <% } %>
-        </div>
+              <div class="assist-bullet-no"></div>
+            <% } %>
         <% }) %>
+
+        <% data2.scoredPoints.forEach(score=> { %>
+          <% if (players.playerId===score.blockPlayers[1]) { %>
+            <div class="block-bullet">1</div>
+          <% } else { %>
+            <div class="block-bullet-no"></div>
+          <% } %>
+        <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.turnoverPlayers[0]) { %>
+            <div class="turnover-bullet">1</div>
+          <% } else { %>
+            <div class="turnover-bullet-no"></div>
+             <% } %>
+          <% }) %>
+      </div>
+      <p><%= players.jerseyNumber %></p>
+      <h4><%= players.name %></h4>
+      <% if(players.gender === "M") { %>
+      <span id="m"></span>
+      <% } else { %>
+      <span id="f"></span>
+      <% } %>
     </div>
-  </section>
+    <% }) %>
+  </div>
+</section>
+
+<section class="players-team-two">
+  <h2><%= data1.team2Name %></h2>
+  <div class="cards">
+    <% data1.team2Players.forEach(players => { %>
+    <div class="card-player">
+      <div class="bullet">
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.scoredBy) { %>
+            <div class="score-bullet">1</div>
+          <% } else { %>
+            <div class="score-bullet-no"></div>
+          <% } %>
+        <% }) %>
+
+        <% data2.scoredPoints.forEach(score=> { %>
+           <% if (players.playerId===score.assistBy) { %>
+              <div class="assist-bullet">1</div>
+            <% } else { %>
+              <div class="assist-bullet-no"></div>
+            <% } %>
+        <% }) %>
+
+        <% data2.scoredPoints.forEach(score=> { %>
+          <% if (players.playerId===score.blockPlayers[0]) { %>
+            <div class="block-bullet">1</div>
+          <% } else { %>
+            <div class="block-bullet-no"></div>
+          <% } %>
+        <% }) %>
+
+        <% data2.scoredPoints.forEach(score => { %>
+          <% if (players.playerId === score.turnoverPlayers[0]) { %>
+            <div class="turnover-bullet">1</div>
+          <% } else { %>
+            <div class="turnover-bullet-no"></div>
+             <% } %>
+          <% }) %>
+      </div>
+      <p><%= players.jerseyNumber %></p>
+      <h4><%= players.name %></h4>
+      <% if(players.gender === "M") { %>
+      <span id="m"></span>
+      <% } else { %>
+      <span id="f"></span>
+      <% } %>
+    </div>
+    <% }) %>
+  </div>
+</section>
 
   <%- include('./partials/foot.ejs') %>
