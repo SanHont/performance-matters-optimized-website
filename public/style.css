@@ -8,6 +8,12 @@
   --c-dark-grey-bg: #242529;
   --c-area-bg: #36383e;
 
+  /* #LIGHT MODE COLORS */
+  --c-light-bg: #C7C7C7;
+  --c-light-area-bg: #EAEAEA;
+  --c-light-body-text-color:#6F6F6F;
+  --c-light-player-cards: #6f6f6f;
+
   --c-player-cards: #6f6f6f;
   --c-male-gender: #76c6ff;
   --c-female-gender: #f476ff;
