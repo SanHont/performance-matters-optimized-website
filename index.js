@@ -32,7 +32,6 @@ app.get("/", async function (request, response) {
   const data = { data1, data2, data3, data4, data5 };
 
   response.render("index", data);
-  console.log(data);
 });
 
 const port = process.env.PORT || 8000;
