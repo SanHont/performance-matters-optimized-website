@@ -97,12 +97,22 @@ body {
 /*--------------------------------------------------------------
   # SIDEBAR
   --------------------------------------------------------------*/
-
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
   grid-area: sidebar;
   border-radius: 0 10px 10px 0;
   background-color: #36383e;
 }
+
+.sidebar img {
+  margin-bottom: 2rem;
+}
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -285,6 +295,7 @@ th {
 .cards {
   position: relative;
   display: flex;
+  justify-content: space-between;
   margin: 0.8rem;
   flex-wrap: wrap;
 }
