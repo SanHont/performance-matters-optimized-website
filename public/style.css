@@ -128,7 +128,7 @@ body {
 .live-score-area {
   grid-area: live-score;
   margin-top: 1.5rem;
-  background-color: #36383e;
+  background-color: var(--c-area-bg);
   position: relative;
   border-radius: var(--br-areas);
 }
@@ -193,7 +193,7 @@ body {
 
 .score-history {
   grid-area: score-history;
-  background-color: #36383e;
+  background-color: var(--c-area-bg);
   border-radius: var(--br-areas);
   margin-bottom: 1.5rem;
 }
@@ -288,7 +288,7 @@ th {
   margin-left: 1.5rem;
   border-radius: var(--br-areas);
   grid-area: players-team-one;
-  background-color: #36383e;
+  background-color: var(--c-area-bg);
   overflow: auto;
 }
 
@@ -405,7 +405,7 @@ th {
   margin-right: 1.5rem;
   border-radius: var(--br-areas);
   grid-area: players-team-two;
-  background-color: #36383e;
+  background-color: var(--c-area-bg);
   overflow: auto;
 }
 
