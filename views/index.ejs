@@ -84,34 +84,34 @@
                   </tr>
                   <% } %>
 
-                    <% } else { %>
-                      <% if (point.team1OorD==="D" ) { %>
-                        <tr class="score-info-team-1 dark-red">
-                          <td>
-                            <%= point.team1Passes %>
-                          </td>
-                          <td>
-                            <%= point.team1Turnovers %>
-                          </td>
-                          <td>
-                            <%= point.team1OorD %>
-                          </td>
-                        </tr>
-                        <% } else {%>
-                          <tr class="score-info-team-1 red">
-                            <td>
-                              <%= point.team1Passes %>
-                            </td>
-                            <td>
-                              <%= point.team1Turnovers %>
-                            </td>
-                            <td>
-                              <%= point.team1OorD %>
-                            </td>
-                          </tr>
-                          <% } %>
-                            <% } %>
-                              <% }) %>
+                <% } else { %>
+                  <% if (point.team1OorD==="D" ) { %>
+                    <tr class="score-info-team-1 dark-red">
+                      <td>
+                        <%= point.team1Passes %>
+                      </td>
+                      <td>
+                        <%= point.team1Turnovers %>
+                      </td>
+                      <td>
+                        <%= point.team1OorD %>
+                      </td>
+                    </tr>
+                    <% } else {%>
+                      <tr class="score-info-team-1 red">
+                        <td>
+                          <%= point.team1Passes %>
+                        </td>
+                        <td>
+                          <%= point.team1Turnovers %>
+                        </td>
+                        <td>
+                          <%= point.team1OorD %>
+                        </td>
+                      </tr>
+                    <% } %>
+                  <% } %>
+                <% }) %>
             </tbody>
           </table>
         </div>
