@@ -28,7 +28,7 @@
 
   --br-areas: 10px;
   --br-card: 10px 10px 2px 2px;
-  --br-gender: 0px 0px 2px 2px
+  --br-gender: 0px 0px 2px 2px;
 }
 
 /*--------------------------------------------------------------
@@ -103,6 +103,7 @@ body {
   border-radius: 0 10px 10px 0;
   background-color: #36383e;
 }
+
 
 /*--------------------------------------------------------------
   # LIVE SCORE
@@ -187,8 +188,8 @@ body {
   justify-content: space-between;
 }
 
-.input-buttons button{
-  font-family: 'Montserrat-SemiBold';
+.input-buttons button {
+  font-family: "Montserrat-SemiBold";
   border-radius: var(--br-areas);
   padding: 0.2rem 0.4rem;
   border: none;
@@ -197,26 +198,26 @@ body {
   transition: 0.2s;
 }
 
-.input-buttons button:hover{
+.input-buttons button:hover {
   scale: 1.05;
 }
 
-.input-goals-button{
+.input-goals-button {
   background-color: var(--c-goals-input);
   color: var(--c-body-text-color);
 }
 
-.input-assists-button{
+.input-assists-button {
   background-color: var(--c-assists-input);
   color: var(--c-body-text-color);
 }
 
-.input-blocks-button{
+.input-blocks-button {
   background-color: var(--c-blocks-input);
   color: var(--c-body-text-color);
 }
 
-.input-turnovers-button{
+.input-turnovers-button {
   background-color: var(--c-turnovers-input);
   color: var(--c-dark-grey-bg);
 }
