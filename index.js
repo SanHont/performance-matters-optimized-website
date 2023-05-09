@@ -34,7 +34,7 @@ app.get("/", async function (request, response) {
   response.render("index", data);
 });
 
-app.get("/post.ejs", async function (request, response) {
+app.get("/post", async function (request, response) {
   const [data1, data2, data3, data4, data5] = await Promise.all(urls.map(fetchJson));
   const data = { data1, data2, data3, data4, data5 };
 
