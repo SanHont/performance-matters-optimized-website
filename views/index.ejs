@@ -1,7 +1,9 @@
 <%- include('./partials/head.ejs') %>
 
   <aside class="sidebar">
-    <img id="add" width="50px" height="50px" src="assets/addplayer.svg" alt="">
+    <a href="post.ejs">
+      <img id="add" width="50px" height="50px" src="assets/addplayer.svg" alt="">
+    </a>
     <button id="toggle">
       <img id="contrast" width="50px" height="50px" src="assets/contrast.svg" alt="">
     </button>
@@ -158,9 +160,21 @@
                   </tr>
                   <% } %>
 
-                    <% } else { %>
-                      <% if (point.team2OorD==="D" ) { %>
-                        <tr class="score-info-team-2 dark-red">
+                <% } else { %>
+                  <% if (point.team2OorD==="D" ) { %>
+                    <tr class="score-info-team-2 dark-red">
+                      <td>
+                       <%= point.team2Passes %>
+                      </td>
+                      <td>
+                        <%= point.team2Turnovers %>
+                      </td>
+                      <td>
+                        <%= point.team2OorD %>
+                      </td>
+                    </tr>
+                      <% } else {%>
+                        <tr class="score-info-team-2 red">
                           <td>
                             <%= point.team2Passes %>
                           </td>
@@ -171,21 +185,9 @@
                             <%= point.team2OorD %>
                           </td>
                         </tr>
-                        <% } else {%>
-                          <tr class="score-info-team-2 red">
-                            <td>
-                              <%= point.team2Passes %>
-                            </td>
-                            <td>
-                              <%= point.team2Turnovers %>
-                            </td>
-                            <td>
-                              <%= point.team2OorD %>
-                            </td>
-                          </tr>
-                          <% } %>
-                            <% } %>
-                              <% }) %>
+                      <% } %>
+                    <% } %>
+                 <% }) %>
             </tbody>
           </table>
         </div>

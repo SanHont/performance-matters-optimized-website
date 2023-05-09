@@ -116,6 +116,12 @@ body {
   background-color: var(--br-card);
   border: none;
   cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+#toggle:hover {
+  scale: 1.05;
+  transition-duration: 0.5s;
 }
 
 /*--------------------------------------------------------------
@@ -259,6 +265,10 @@ th {
   width: 2.8rem;
 }
 
+thead {
+  color: var(--c-player-cards-text);
+}
+
 .red {
   background-color: var(--c-score-light-red);
 }
@@ -292,6 +302,7 @@ th {
 
 .players-team-one h2,
 .players-team-two h2 {
+  color: var(--c-player-cards-text);
   margin-top: 0.8rem;
   margin-left: 1.25rem;
 }
