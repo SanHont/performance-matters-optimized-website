@@ -41,6 +41,22 @@ app.get("/post.ejs", async function (request, response) {
   response.render("post", data);
 });
 
+app.post("/form", (request, response) => {
+  request.body.answers = [
+    {
+      content: request.body.content,
+      questionId: request.body.question,
+    },
+    /* Met request.body stuur je geparced json data naar de endpoint, in dit geval naar Posturl */
+  ];
+  postJson(postUrl, request.body).then((data) => {
+    if (data.success) {
+      response.redirect("/?memberPosted=true");
+    }
+    response.redirect("/");
+  });
+});
+
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Application available on: http://localhost:${port}`);
@@ -48,6 +64,16 @@ app.listen(port, () => {
 
 async function fetchJson(urls) {
   return await fetch(urls)
+    .then((response) => response.json())
+    .catch((error) => error);
+}
+
+export async function postJson(url, body) {
+  return await fetch(url, {
+    method: "post",
+    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json" },
+  })
     .then((response) => response.json())
     .catch((error) => error);
 }

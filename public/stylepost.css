@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+# VARIABLES
+--------------------------------------------------------------*/
+
+:root {
+  --c-body-text-color: #ffffff;
+
+  --c-dark-grey-bg: #242529;
+  --c-area-bg: #36383e;
+
+  --c-player-cards: #6f6f6f;
+  --c-player-cards-text: #fff:
+  --c-male-gender: #76c6ff;
+  --c-female-gender: #f476ff;
+
+  --c-blocks-input: #ff4b4b;
+  --c-turnovers-input: #ecd45e;
+  --c-goals-input: #4ed19d;
+  --c-assists-input: #9570cf;
+
+  --c-score-green: #37c356;
+  --c-score-light-green: #5dff81;
+  --c-score-red: #c91e1e;
+  --c-score-light-red: #ff4d4d;
+
+  --c-button-border: #efffad;
+
+  --c-live-button: #ff1a1a;
+
+  --br-areas: 10px;
+  --br-card: 10px 10px 2px 2px;
+  --br-gender: 0px 0px 2px 2px;
+}
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+
+form {
+  background-color: var(--c-area-bg);
+  border-radius: var(--br-areas);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+label {
+  margin-top: 1rem;
+}

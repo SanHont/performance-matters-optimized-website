@@ -13,4 +13,41 @@
   </button>
 </aside>
 
+<form id="post" action="/form" method="post" name="newPlayer">
+  <fieldset>Add-player</fieldset>
+
+  <label for="name">Name</label>
+  <input
+    type="text"
+    name="name"
+    placeholder="..."
+    value="<%= locals.values?.name ?? '' %>"
+  />
+
+  <label for="name">Gender</label>
+  <input type="text" name="gender" placeholder="..." />
+
+  <label for="name">JerseyNumber</label>
+  <input type="number" min="1" max="100" name="jerseyNumber" placeholder="..." />
+
+  <label for="name">Team</label>
+  <input type="text" name="team" placeholder="..." />
+
+  <label>
+    Questions
+    <select name="question">
+      <option disabled selected>--- Select ---</option>
+      <% data5.questions.forEach(answer => { %>
+      <option value="<%= answer.id %>"><%= answer.title %></option>
+      <% }) %>
+    </select>
+  </label>
+  <label>
+    Answer
+    <input type="text" name="content" value="<%= locals.values?.content ?? ''%>" />
+  </label>
+
+  <input id="submit" type="submit" value="Submit" />
+</form>
+
 <%- include('./partials/foot.ejs') %>
