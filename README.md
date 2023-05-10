@@ -19,7 +19,8 @@ UltiTV Commentary Dashboard
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-<img width="50%" src='public/assets/screenhome.png'>
+<img width="70%" src='public/assets/screenhome.png'>
+<img width="40%" src='public/assets/screenpost.png'>
 
 ## Gebruik
 
