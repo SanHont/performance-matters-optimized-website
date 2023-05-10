@@ -47,6 +47,8 @@ Het project is gemaakt Nodejs, Express en EJS. De pagina is ingedeeld met een gr
 
 Om aan deze repo te kunnen werken moet je de repo forken, dit doe je door op het knopje rechtsboven te drukken. Daarna kan je het openen in GitHub Desktop en kan je er mee aan de slag gaan. Het is wel belangrijk dat je de juiste Node packages installeert (EJS, Express) zodat alles goed werkt.
 
+Om dit project te gebruiken kun je dit forken en openen met vs code, in de terminal `npm innit` en `npm install`, `express` en `ejs`. In de pakkage json bij scripts moet een ` "start": "node index.js"` staan
+
 ## Bronnen
 
 ## Licentie
