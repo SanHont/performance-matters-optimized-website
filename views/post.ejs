@@ -27,7 +27,7 @@
 
 <section class="form-area">
 <form id="post" action="/form" method="post" name="newPlayer">
-  <fieldset>Add-player</fieldset>
+<h2>Add-Player</h2>
 
   <label for="id">Id:</label>
   <input type="text" name="id" placeholder="..." />
@@ -60,7 +60,7 @@
   </label>
   <label>
     Answer:
-    <input type="text" name="content" value="<%= locals.values?.content ?? ''%>" />
+    <input type="text" name="content" class="answer-input" value="<%= locals.values?.content ?? ''%>" />
   </label>
 
   <input id="submit" type="submit" value="Submit" />
