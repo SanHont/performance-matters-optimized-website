@@ -19,6 +19,8 @@ UltiTV Commentary Dashboard
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
+<img width="50%" src='public/assets/screenhome.png'>
+
 ## Gebruik
 
 De website is bedoelt voor de commentatoren om de scores door te kunnen geven, speler informatie te kunnen vinden en het verloop van de wedstrijd goed te kunnen zien. De website is zo ingedeeld dat je twee vlakken hebt met de twee verschillende teams en in het midden staan de scores, in het vlak van de teams staan de spelers met hun jersey nummer en een blauwe of roze strook wat voor hun geslacht staat. Aan de linker kant staat een knopje waarmee je de website ook in een andere kleuren thema kunt weergeven en hierboven staat nog een knop om een nieuwe speler toe te voegen.
