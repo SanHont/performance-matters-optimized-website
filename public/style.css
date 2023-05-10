@@ -252,6 +252,13 @@ body {
   margin: 0 0 0 0.8rem;
 }
 
+#score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .team-scored-right {
   margin: 0 0.8rem 0 0;
 }

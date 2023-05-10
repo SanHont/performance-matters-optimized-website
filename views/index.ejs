@@ -119,6 +119,27 @@
             </tbody>
           </table>
         </div>
+
+        <div class="middle">
+          <table cellspacing="0" cellpadding="0">
+            <thead>
+              <tr>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="score">
+              <tr class="score">
+                <tr>
+                  <% data2.scoredPoints.forEach(point => { %>
+                    <tr>
+                      <td><%= point.team1Score %> - <%= point.team2Score %></td>
+                     </tr>
+                  <% }) %>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="team-scored-right">
           <table cellspacing="0" cellpadding="0">
             <thead>
