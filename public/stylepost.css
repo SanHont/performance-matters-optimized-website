@@ -165,3 +165,34 @@ select {
 #toggle:hover {
   scale: 0.9;
 }
+
+/*--------------------------------------------------------------
+  # Ligth-mode
+  --------------------------------------------------------------*/
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --c-dark-grey-bg: #c7c7c7;
+      --c-area-bg: #eaeaea;
+      --c-player-cards: #6f6f6f;
+    }
+    .live-score-titles,
+    .live-score,
+    .live-score-team-names,
+    .input-turnovers-button,
+    .players-team-one h2,
+    .players-team-two h2 {
+      color: black;
+    }
+  
+    thead {
+      color: black;
+    }
+  }
+  
+  .light {
+    --c-dark-grey-bg: #c7c7c7;
+    --c-area-bg: #eaeaea;
+    --c-player-cards: #6f6f6f;
+    --c-player-cards-text: #000000;
+  }
