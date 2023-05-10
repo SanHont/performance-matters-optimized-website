@@ -31,16 +31,85 @@
   --br-card: 10px 10px 2px 2px;
   --br-gender: 0px 0px 2px 2px;
 }
+
+/*--------------------------------------------------------------
+  # FONTS
+  --------------------------------------------------------------*/
+
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: "Montserrat-Medium";
+    src: url(../fonts/Montserrat-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+  }
+  
+  @font-face {
+    font-family: "Inter-Regular";
+    src: url(../fonts/Inter-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: "Inter-SemiBold";
+    src: url(../fonts/Inter-SemiBold.ttf);
+  }
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--c-dark-grey-bg);
+  color: var(--c-body-text-color);
+  font-family: "Inter-Regular";
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 5% 95%;
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+  grid-template-areas:
+    "sidebar form-area"
+    "sidebar form-area"
+    "sidebar form-area"
+    "sidebar form-area";
+    overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Form
 --------------------------------------------------------------*/
+
+
+.form-area {
+  grid-area: 'form-area';
+  display: flex;
+  justify-content: center;
+}
 
 form {
   background-color: var(--c-area-bg);
   border-radius: var(--br-areas);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 5rem;
   padding: 1rem;
@@ -48,4 +117,45 @@ form {
 
 label {
   margin-top: 1rem;
+}
+
+input {
+  background-color: #6F6F6F;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--br-areas);
+  height: 2rem;
+  padding: 0.2rem;
+}
+
+#submit {
+  margin-top: 1rem;
+  width: 20rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  grid-area: sidebar;
+  border-radius: 0 10px 10px 0;
+  background-color: var(--c-area-bg);
+
+}
+
+.sidebar img {
+  margin-bottom: 2rem;
+}
+
+#toggle {
+  background-color: var(--br-card);
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+#toggle:hover {
+  scale: 0.9;
 }

@@ -1,4 +1,16 @@
-<%- include('./partials/head.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltiTV // Commentary</title>
+    <link rel="stylesheet" href="/stylepost.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
 
 
 <aside class="sidebar">
@@ -13,13 +25,14 @@
   </button>
 </aside>
 
+<section class="form-area">
 <form id="post" action="/form" method="post" name="newPlayer">
   <fieldset>Add-player</fieldset>
 
-  <label for="id">Id</label>
+  <label for="id">Id:</label>
   <input type="text" name="id" placeholder="..." />
 
-  <label for="name">Name</label>
+  <label for="name">Name:</label>
   <input
     type="text"
     name="name"
@@ -27,17 +40,17 @@
     value="<%= locals.values?.name ?? '' %>"
   />
 
-  <label for="name">Gender</label>
+  <label for="name">Gender:</label>
   <input type="text" name="gender" placeholder="..." />
 
-  <label for="name">JerseyNumber</label>
+  <label for="name">JerseyNumber:</label>
   <input type="number" min="1" max="100" name="jerseyNumber" placeholder="..." />
 
-  <label for="name">Team</label>
+  <label for="name">Team:</label>
   <input type="text" name="team" placeholder="..." />
 
   <label>
-    Questions
+    Questions:
     <select name="question">
       <option disabled selected>--- Select ---</option>
       <% data5.questions.forEach(answer => { %>
@@ -46,11 +59,12 @@
     </select>
   </label>
   <label>
-    Answer
+    Answer:
     <input type="text" name="content" value="<%= locals.values?.content ?? ''%>" />
   </label>
 
   <input id="submit" type="submit" value="Submit" />
 </form>
+</section>
 
 <%- include('./partials/foot.ejs') %>
